@@ -7,6 +7,8 @@ class HowMuchToManageViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var amountField: MoneyField!
 
+    private let keyboardInput = KeyboardInputViewModel.shared
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,7 +21,7 @@ class HowMuchToManageViewController: UIViewController {
             return btn
         }()
 
-        amountField.reactive.text <~ amountField.money.mapText(withFormat: .currency)
+        amountField.reactive.text <~ keyboardInput.asMoney.mapText(withFormat: .currency)
 
         amountField.becomeFirstResponder()
     }
@@ -27,13 +29,13 @@ class HowMuchToManageViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
-        amountField.setMoney(0)
+        keyboardInput.setKeyInput(fromMoney: 0)
     }
 
     // MARK: - Actions
     
     func userTapFinishButton() {
-        Account.shared.debit(amountField.money.value)
+        Account.shared.debit(keyboardInput.asMoney.value)
         
         let destination = UIStoryboard(name: "DecisionScreen", bundle: nil).instantiateInitialViewController()!
 

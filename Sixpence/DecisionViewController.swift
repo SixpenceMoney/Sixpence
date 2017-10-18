@@ -13,7 +13,7 @@ class DecisionViewController: UIViewController {
 
     fileprivate let account = Account.shared
     fileprivate let shoppingCart = ShoppingCart.shared
-    private let keyboardInput = KeyboardInputViewModel.shared
+    fileprivate let keyboardInput = KeyboardInputViewModel.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,11 +53,11 @@ extension DecisionViewController: KeyboardDelegate {
     // MARK: - Actions
     
     func userTapAdd$Button() {
-        let amountToAdd = changeBalanceLabel.remote!.money.value
+        let amountToAdd = keyboardInput.asMoney.value
         
         account.debit(amountToAdd)
-        
-        changeBalanceLabel.remote?.setMoney(0)
+
+        keyboardInput.setKeyInput(fromMoney: 0)
         changeBalanceLabel.remote?.endEditing(true)
         navigationController?.popToRootViewController(animated: true)
         keyboardController.popToRootViewController(animated: false)
@@ -76,7 +76,7 @@ extension DecisionViewController: KeyboardDelegate {
 
         account.credit(amountToSubtract)
         
-        changeBalanceLabel.remote?.setMoney(0)
+        keyboardInput.setKeyInput(fromMoney: 0)
         changeBalanceLabel.remote?.endEditing(true)
         navigationController?.popToRootViewController(animated: true)
         keyboardController.popToRootViewController(animated: false)

@@ -8,11 +8,7 @@ import Foundation
 
 class MoneyField: UITextField, UITextFieldDelegate {
 
-    // TODO: Use the VM instead
-    @available(*, deprecated)
-    let money: Property<Money>
-
-    private let keyboardInput = KeyboardInputViewModel.shared
+    private let keyboardInput: KeyboardInputViewModel
     
     // MARK: - Initializers
     
@@ -20,8 +16,9 @@ class MoneyField: UITextField, UITextFieldDelegate {
         self.init(aDecoder)
     }
 
-    init(_ coder: NSCoder? = nil) {
-        self.money = Property(capturing: keyboardInput.asMoney)
+    init(_ coder: NSCoder? = nil,
+         keyboardInput: KeyboardInputViewModel = KeyboardInputViewModel.shared) {
+        self.keyboardInput = keyboardInput
 
         if let coder = coder {
             super.init(coder: coder)!
@@ -31,12 +28,6 @@ class MoneyField: UITextField, UITextFieldDelegate {
 
         self.delegate = self
         self.keyboardType = .numberPad
-    }
-    
-    // MARK: - Actions
-    
-    func setMoney(_ money: Money) {
-        keyboardInput.setKeyInput(fromMoney: money)
     }
     
     // MARK: - Key Press Handling

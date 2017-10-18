@@ -7,9 +7,12 @@ final class MoneyFieldSpec: QuickSpec {
     override func spec() {
         
         var subject: MoneyField!
+
+        var keyboardInput: KeyboardInputViewModel!
         
         beforeEach {
-            subject = MoneyField()
+            keyboardInput = KeyboardInputViewModel()
+            subject = MoneyField(keyboardInput: keyboardInput)
         }
         
         context("entering money") {
@@ -19,23 +22,23 @@ final class MoneyFieldSpec: QuickSpec {
                 _ = subject.textField(subject, shouldChangeCharactersIn: NSRange(), replacementString: "0")
                 _ = subject.textField(subject, shouldChangeCharactersIn: NSRange(), replacementString: "0")
                 
-                expect(subject.money.value) == 5
+                expect(keyboardInput.asMoney.value) == 5
 
                 subject.deleteBackward()
 
-                expect(subject.money.value) == 0.50
+                expect(keyboardInput.asMoney.value) == 0.50
 
                 _ = subject.textField(subject, shouldChangeCharactersIn: NSRange(), replacementString: "")
 
-                expect(subject.money.value) == 0.05
+                expect(keyboardInput.asMoney.value) == 0.05
 
                 subject.deleteBackward()
 
-                expect(subject.money.value) == 0.00
+                expect(keyboardInput.asMoney.value) == 0.00
 
                 subject.deleteBackward()
 
-                expect(subject.money.value) == 0.00
+                expect(keyboardInput.asMoney.value) == 0.00
             }
             
             it("does nothing when I enter zeros in the beginning") {
@@ -43,21 +46,7 @@ final class MoneyFieldSpec: QuickSpec {
                 _ = subject.textField(subject, shouldChangeCharactersIn: NSRange(), replacementString: "0")
                 // ...and so on...
                 
-                expect(subject.money.value) == 0
-            }
-        }
-
-        describe("setMoney(_:)") { 
-            it("sets the amount") {
-                subject.setMoney(111.22)
-                
-                expect(subject.money.value) == 111.22
-            }
-            
-            it("sets the amount to zero") {
-                subject.setMoney(0)
-                
-                expect(subject.money.value) == 0
+                expect(keyboardInput.asMoney.value) == 0
             }
         }
     }
