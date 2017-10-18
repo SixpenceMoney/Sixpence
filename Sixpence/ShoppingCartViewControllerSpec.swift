@@ -27,7 +27,7 @@ final class ShoppingCartViewControllerSpec: QuickSpec {
         }
 
         it("shows 0 at first") {
-            expect(subject.itemLabel.text) == "-$0.00"
+            expect(subject.itemLabel.text) == "$0.00"
         }
 
         context("when user has entered an amount") {
@@ -37,13 +37,13 @@ final class ShoppingCartViewControllerSpec: QuickSpec {
             }
 
             it("shows the amount on the label") {
-                expect(subject.itemLabel.text) == "-$99.99"
+                expect(subject.itemLabel.text) == "$99.99"
             }
 
             it("clears the amount when tapped") {
                 subject.userDidTapShoppingCartIcon()
 
-                expect(subject.itemLabel.text) == "-$0.00"
+                expect(subject.itemLabel.text) == "$0.00"
             }
 
             it("adds an Item to the Shopping Cart") {
