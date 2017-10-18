@@ -5,7 +5,7 @@ final class ShoppingCartViewController: UIViewController {
     
     @IBOutlet weak var itemLabel: UILabel!
 
-    var textInputVM = TextInputViewModel.shared
+    var keyboardInput = KeyboardInputViewModel.shared
     var shoppingCart = ShoppingCart.shared
 
     override func viewDidLoad() {
@@ -13,17 +13,17 @@ final class ShoppingCartViewController: UIViewController {
 
         shoppingCart.removeAllItems()
 
-        itemLabel.reactive.text <~ textInputVM.moneyToShow.mapText(withFormat: .currency)
+        itemLabel.reactive.text <~ keyboardInput.asMoney.mapText(withFormat: .currency)
     }
 
     // MARK: - Actions
 
     @IBAction func userDidTapShoppingCartIcon() {
-        let item = Item(amount:  textInputVM.moneyToShow.value)
+        let item = Item(amount:  keyboardInput.asMoney.value)
 
         shoppingCart.add(item)
 
-        textInputVM.setKeys(fromMoney: 0)
+        keyboardInput.setKeyInput(fromMoney: 0)
     }
     
     @IBAction func userDidTapShoppingCartArrowIcon() {

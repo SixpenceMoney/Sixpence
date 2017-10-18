@@ -2,6 +2,8 @@ import UIKit
 
 class TopDecisionViewController: UIViewController {
 
+    private let keyboardInput = KeyboardInputViewModel.shared
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         
@@ -14,7 +16,7 @@ class TopDecisionViewController: UIViewController {
         (carouselController.viewControllers.first! as! DecisionViewController).keyboardController!.popToRootViewController(animated: true)
 
         // ...and sets the entering amount to zero
-        TextInputViewModel.shared.setKeys(fromMoney: 0)
+        keyboardInput.setKeyInput(fromMoney: 0)
 
         self.view.endEditing(true)
     }

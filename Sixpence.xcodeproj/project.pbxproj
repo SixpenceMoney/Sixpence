@@ -45,7 +45,7 @@
 		E06DD82F1F6593FD00A75C49 /* NewUser+DecisionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06DD82E1F6593FD00A75C49 /* NewUser+DecisionScreen.swift */; };
 		E09BDB7F1F93082D00243CA9 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09BDB7E1F93082D00243CA9 /* ShoppingCartViewController.swift */; };
 		E09BDB811F93994800243CA9 /* ShoppingCartViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09BDB801F93994800243CA9 /* ShoppingCartViewControllerSpec.swift */; };
-		E09BDB831F959F0700243CA9 /* TextInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09BDB821F959F0700243CA9 /* TextInputViewModel.swift */; };
+		E09BDB831F959F0700243CA9 /* KeyboardInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09BDB821F959F0700243CA9 /* KeyboardInputViewModel.swift */; };
 		E09BDB851F9638F000243CA9 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09BDB841F9638F000243CA9 /* ShoppingCart.swift */; };
 		E09BDB871F9638FB00243CA9 /* ShoppingCartSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09BDB861F9638FB00243CA9 /* ShoppingCartSpec.swift */; };
 		E09BDB891F9639C000243CA9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09BDB881F9639C000243CA9 /* Item.swift */; };
@@ -123,7 +123,7 @@
 		E06DD82E1F6593FD00A75C49 /* NewUser+DecisionScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NewUser+DecisionScreen.swift"; sourceTree = "<group>"; };
 		E09BDB7E1F93082D00243CA9 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		E09BDB801F93994800243CA9 /* ShoppingCartViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewControllerSpec.swift; sourceTree = "<group>"; };
-		E09BDB821F959F0700243CA9 /* TextInputViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputViewModel.swift; sourceTree = "<group>"; };
+		E09BDB821F959F0700243CA9 /* KeyboardInputViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardInputViewModel.swift; sourceTree = "<group>"; };
 		E09BDB841F9638F000243CA9 /* ShoppingCart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
 		E09BDB861F9638FB00243CA9 /* ShoppingCartSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartSpec.swift; sourceTree = "<group>"; };
 		E09BDB881F9639C000243CA9 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -368,7 +368,7 @@
 				E05BAC1B1F887089003798A1 /* MoneyFieldSpec.swift */,
 				E0B63F871F71C08A00C0E4FB /* MoneyLabel.swift */,
 				E0C85B861F5480D50027E2DC /* AnimatedMoneyLabel.swift */,
-				E09BDB821F959F0700243CA9 /* TextInputViewModel.swift */,
+				E09BDB821F959F0700243CA9 /* KeyboardInputViewModel.swift */,
 			);
 			name = __Sixpence_UIKit;
 			sourceTree = "<group>";
@@ -616,7 +616,7 @@
 				E044AE9C1F66222E0094FC0F /* KeyboardController.swift in Sources */,
 				E04007661F51EB2500629219 /* HowMuchToManageViewController.swift in Sources */,
 				E0C85B8A1F54A2E30027E2DC /* Account.swift in Sources */,
-				E09BDB831F959F0700243CA9 /* TextInputViewModel.swift in Sources */,
+				E09BDB831F959F0700243CA9 /* KeyboardInputViewModel.swift in Sources */,
 				E0F6CDFA1F695C65008AB368 /* Add$OrSpend$ViewController.swift in Sources */,
 				E0B63F881F71C08A00C0E4FB /* MoneyLabel.swift in Sources */,
 				E05BAC161F88511B003798A1 /* Money+Operators.swift in Sources */,

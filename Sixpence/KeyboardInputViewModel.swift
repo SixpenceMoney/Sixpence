@@ -1,15 +1,15 @@
 import ReactiveSwift
 import Money
 
-// Shows money on the screen based on keyboard input
-final class TextInputViewModel {
+// Transforms key input from the user to money
+final class KeyboardInputViewModel {
 
-    static let shared = TextInputViewModel()
+    static let shared = KeyboardInputViewModel()
 
     // The money to show based on the keys entered
-    let moneyToShow: Property<Money>
+    let asMoney: Property<Money>
 
-    // The keys entered by the user
+    // The keys inputted by the user
     private var keysInputted = MutableProperty<[String]>([])
 
     // MARK: - Initializers
@@ -18,16 +18,16 @@ final class TextInputViewModel {
         let _money = keysInputted.map {
             Money(minorUnits: Int($0.joined()) ?? 0)
         }
-        self.moneyToShow = Property(capturing: _money)
+        self.asMoney = Property(capturing: _money)
     }
 
     // MARK: - Methods
 
-    func addKey(key: String) {
+    func addKeyInput(key: String) {
         keysInputted.value.append(key)
     }
 
-    func deleteLastKey() {
+    func deleteLastKeyInput() {
         guard keysInputted.value.isPresent else {
             return
         }
@@ -35,7 +35,7 @@ final class TextInputViewModel {
         keysInputted.value = Array(keysInputted.value[0 ..< keysInputted.value.endIndex-1])
     }
 
-    func setKeys(fromMoney money: Money) {
+    func setKeyInput(fromMoney money: Money) {
         let newValue: [String] = money
             .formatted(withStyle: .decimal)
             .replacingOccurrences(of: ".", with: "")

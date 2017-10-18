@@ -11,19 +11,23 @@ class DecisionViewController: UIViewController {
     
     var keyboardController: KeyboardController!
 
+    fileprivate let account = Account.shared
+    fileprivate let shoppingCart = ShoppingCart.shared
+    private let keyboardInput = KeyboardInputViewModel.shared
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.keyboardController = UIStoryboard(name: "DecisionScreen", bundle: nil).instantiateViewController(withIdentifier: "KeyboardController") as! KeyboardController
 
-        balanceLabel.money <~ Account.shared.balance
+        balanceLabel.money <~ account.balance
 
         keyboardController.keyboardDelegate = self
         
         changeBalanceLabel.remote = (self.navigationController as! CarouselController)
             .remoteMoneyField
 
-        changeBalanceLabel.reactive.text <~ TextInputViewModel.shared.moneyToShow.mapText(withFormat: .decimal)
+        changeBalanceLabel.reactive.text <~ keyboardInput.asMoney.mapText(withFormat: .decimal)
 
         changeBalanceLabel.remote?.inputAccessoryView = {
             let containerView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 60))
@@ -51,7 +55,7 @@ extension DecisionViewController: KeyboardDelegate {
     func userTapAdd$Button() {
         let amountToAdd = changeBalanceLabel.remote!.money.value
         
-        Account.shared.debit(amountToAdd)
+        account.debit(amountToAdd)
         
         changeBalanceLabel.remote?.setMoney(0)
         changeBalanceLabel.remote?.endEditing(true)
@@ -68,9 +72,9 @@ extension DecisionViewController: KeyboardDelegate {
     }
 
     func userTapConfirmSpend$Button() {
-        let amountToSubtract = ShoppingCart.shared.total.value
+        let amountToSubtract = shoppingCart.total.value
 
-        Account.shared.credit(amountToSubtract)
+        account.credit(amountToSubtract)
         
         changeBalanceLabel.remote?.setMoney(0)
         changeBalanceLabel.remote?.endEditing(true)

@@ -12,7 +12,7 @@ class MoneyField: UITextField, UITextFieldDelegate {
     @available(*, deprecated)
     let money: Property<Money>
 
-    private let textInputVM = TextInputViewModel.shared
+    private let keyboardInput = KeyboardInputViewModel.shared
     
     // MARK: - Initializers
     
@@ -21,7 +21,7 @@ class MoneyField: UITextField, UITextFieldDelegate {
     }
 
     init(_ coder: NSCoder? = nil) {
-        self.money = Property(capturing: textInputVM.moneyToShow)
+        self.money = Property(capturing: keyboardInput.asMoney)
 
         if let coder = coder {
             super.init(coder: coder)!
@@ -36,7 +36,7 @@ class MoneyField: UITextField, UITextFieldDelegate {
     // MARK: - Actions
     
     func setMoney(_ money: Money) {
-        textInputVM.setKeys(fromMoney: money)
+        keyboardInput.setKeyInput(fromMoney: money)
     }
     
     // MARK: - Key Press Handling
@@ -48,14 +48,14 @@ class MoneyField: UITextField, UITextFieldDelegate {
         if string == "" {  // is a backspace
             deleteBackward()
         } else {
-            textInputVM.addKey(key: string)
+            keyboardInput.addKeyInput(key: string)
         }
         
         return false
     }
     
     override func deleteBackward() {
-        textInputVM.deleteLastKey()
+        keyboardInput.deleteLastKeyInput()
     }
 
     

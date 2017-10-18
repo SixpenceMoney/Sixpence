@@ -8,17 +8,17 @@ final class ShoppingCartViewControllerSpec: QuickSpec {
 
         var subject: ShoppingCartViewController!
 
-        var textInput: TextInputViewModel!
+        var keyboardInput: KeyboardInputViewModel!
         var shoppingCart: ShoppingCart!
 
         beforeEach {
             subject = UIStoryboard(name: "DecisionScreen", bundle: nil)
                 .instantiateViewController(withIdentifier: "ShoppingCartViewController")
                 as! ShoppingCartViewController
-
-            textInput = TextInputViewModel()
+            keyboardInput = KeyboardInputViewModel()
             shoppingCart = ShoppingCart()
-            subject.textInputVM = textInput
+
+            subject.keyboardInput = keyboardInput
             subject.shoppingCart = shoppingCart
 
             // TODO: Create a test factory method
@@ -33,7 +33,7 @@ final class ShoppingCartViewControllerSpec: QuickSpec {
         context("when user has entered an amount") {
 
             beforeEach {
-                textInput.setKeys(fromMoney: 99.99)
+                keyboardInput.setKeyInput(fromMoney: 99.99)
             }
 
             it("shows the amount on the label") {
