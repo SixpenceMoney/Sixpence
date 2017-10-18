@@ -1,0 +1,8 @@
+github "Quick/Nimble" "v7.0.1"
+github "Quick/Quick" "v1.1.0"
+github "ReactiveCocoa/ReactiveCocoa" "6.0.1"
+github "ReactiveCocoa/ReactiveSwift" "2.0.1"
+github "antitypical/Result" "3.2.3"
+github "danthorpe/Money" "2.0.1"
+github "danthorpe/ValueCoding" "2.1.0"
+github "malcommac/SwiftDate" "4.1.11"

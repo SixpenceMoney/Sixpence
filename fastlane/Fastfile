@@ -1,0 +1,21 @@
+fastlane_version "2.54.0"
+
+default_platform :ios
+
+before_all do
+  skip_docs
+end
+
+desc "Release to Hockey"
+lane :release do
+  gym(
+    export_method: 'development'
+  )
+
+  hockey(
+    ipa: 'Sixpence.ipa',
+    dsym: 'Sixpence.app.dSYM.zip',
+    release_type: '2',  # alpha
+    notify: '0'  # do not notify testers
+  )
+end

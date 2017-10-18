@@ -1,0 +1,951 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E00B00481F789C9E002038EF /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B00471F789C9E002038EF /* Transaction.swift */; };
+		E00B004A1F789CB3002038EF /* TransactionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B00491F789CB3002038EF /* TransactionTest.swift */; };
+		E020E87B1F71A368006933F5 /* ProxyMoneyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E020E87A1F71A368006933F5 /* ProxyMoneyField.swift */; };
+		E020E87D1F71B609006933F5 /* PropertyProtocol+Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = E020E87C1F71B609006933F5 /* PropertyProtocol+Money.swift */; };
+		E02A94531F5CDBC5000CA56A /* Money+Strideable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02A94521F5CDBC5000CA56A /* Money+Strideable.swift */; };
+		E02A94581F5CF3AB000CA56A /* Money+StrideableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02A94571F5CF3AB000CA56A /* Money+StrideableTest.swift */; };
+		E04007641F51EB2500629219 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04007631F51EB2500629219 /* AppDelegate.swift */; };
+		E04007661F51EB2500629219 /* HowMuchToManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04007651F51EB2500629219 /* HowMuchToManageViewController.swift */; };
+		E04007691F51EB2500629219 /* HowMuchToManageScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04007671F51EB2500629219 /* HowMuchToManageScreen.storyboard */; };
+		E040076B1F51EB2500629219 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E040076A1F51EB2500629219 /* Assets.xcassets */; };
+		E040076E1F51EB2500629219 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E040076C1F51EB2500629219 /* LaunchScreen.storyboard */; };
+		E040077C1F51EB9600629219 /* TheStoryOfHowISellTheApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E040077B1F51EB9600629219 /* TheStoryOfHowISellTheApp.swift */; };
+		E04007901F51EBCE00629219 /* NewUser+HowMuchToManageScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E040078F1F51EBCE00629219 /* NewUser+HowMuchToManageScreen.swift */; };
+		E04007931F51EBF100629219 /* HowMuchToManageScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04007921F51EBF100629219 /* HowMuchToManageScreen.swift */; };
+		E04007A61F51ECD800629219 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04007A41F51ECD800629219 /* Nimble.framework */; };
+		E04007A71F51ECD800629219 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04007A51F51ECD800629219 /* Quick.framework */; };
+		E04007AA1F51F03200629219 /* UIColor+theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04007A91F51F03200629219 /* UIColor+theme.swift */; };
+		E04007AC1F51F52F00629219 /* FinishButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04007AB1F51F52F00629219 /* FinishButton.swift */; };
+		E04007B11F51FB0C00629219 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04007A41F51ECD800629219 /* Nimble.framework */; };
+		E04007B21F51FB0C00629219 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04007A51F51ECD800629219 /* Quick.framework */; };
+		E04007C51F5202C500629219 /* Money.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04007B41F51FF3500629219 /* Money.framework */; };
+		E04007C71F5202C500629219 /* ValueCoding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04007C61F5202C500629219 /* ValueCoding.framework */; };
+		E04007CB1F52303200629219 /* DecisionScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04007CA1F52303200629219 /* DecisionScreen.storyboard */; };
+		E04007D41F52667C00629219 /* DecisionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04007D31F52667C00629219 /* DecisionScreen.swift */; };
+		E044AE9A1F6620CB0094FC0F /* Spend$ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E044AE991F6620CB0094FC0F /* Spend$ViewController.swift */; };
+		E044AE9C1F66222E0094FC0F /* KeyboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E044AE9B1F66222E0094FC0F /* KeyboardController.swift */; };
+		E044AE9F1F6623F40094FC0F /* Add$ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E044AE9E1F6623F40094FC0F /* Add$ViewController.swift */; };
+		E044AEA31F6747CF0094FC0F /* AccountSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E044AEA21F6747CF0094FC0F /* AccountSpec.swift */; };
+		E04768421F6595F70042687F /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04768411F6595F70042687F /* NewUser.swift */; };
+		E05850901F60F41D00D42C45 /* SwiftDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E058508F1F60F41D00D42C45 /* SwiftDate.framework */; };
+		E05BAC131F848BDB003798A1 /* Array+isPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05BAC121F848BDB003798A1 /* Array+isPresent.swift */; };
+		E05BAC161F88511B003798A1 /* Money+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05BAC151F88511B003798A1 /* Money+Operators.swift */; };
+		E05BAC181F88550E003798A1 /* Money+OperatorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05BAC171F88550E003798A1 /* Money+OperatorsSpec.swift */; };
+		E05BAC1C1F887089003798A1 /* MoneyFieldSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05BAC1B1F887089003798A1 /* MoneyFieldSpec.swift */; };
+		E06DD82C1F65894E00A75C49 /* DisplayMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06DD82B1F65894E00A75C49 /* DisplayMatcher.swift */; };
+		E06DD82F1F6593FD00A75C49 /* NewUser+DecisionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06DD82E1F6593FD00A75C49 /* NewUser+DecisionScreen.swift */; };
+		E09BDB7F1F93082D00243CA9 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09BDB7E1F93082D00243CA9 /* ShoppingCartViewController.swift */; };
+		E09BDB811F93994800243CA9 /* ShoppingCartViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09BDB801F93994800243CA9 /* ShoppingCartViewControllerSpec.swift */; };
+		E09BDB831F959F0700243CA9 /* TextInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09BDB821F959F0700243CA9 /* TextInputViewModel.swift */; };
+		E09BDB851F9638F000243CA9 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09BDB841F9638F000243CA9 /* ShoppingCart.swift */; };
+		E09BDB871F9638FB00243CA9 /* ShoppingCartSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09BDB861F9638FB00243CA9 /* ShoppingCartSpec.swift */; };
+		E09BDB891F9639C000243CA9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09BDB881F9639C000243CA9 /* Item.swift */; };
+		E0B63F881F71C08A00C0E4FB /* MoneyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B63F871F71C08A00C0E4FB /* MoneyLabel.swift */; };
+		E0B9CB871F7F47310042CB18 /* TopDecisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B9CB861F7F47310042CB18 /* TopDecisionViewController.swift */; };
+		E0C85B841F539CD50027E2DC /* MoneyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C85B831F539CD50027E2DC /* MoneyField.swift */; };
+		E0C85B871F5480D50027E2DC /* AnimatedMoneyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C85B861F5480D50027E2DC /* AnimatedMoneyLabel.swift */; };
+		E0C85B8A1F54A2E30027E2DC /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C85B891F54A2E30027E2DC /* Account.swift */; };
+		E0D500A11F694FCA00548836 /* DecisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D500A01F694FCA00548836 /* DecisionViewController.swift */; };
+		E0DBB0541F71963E00E82A3C /* CarouselController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DBB0531F71963E00E82A3C /* CarouselController.swift */; };
+		E0F4C78D1F536C4D00C13169 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F4C78A1F536C4D00C13169 /* ReactiveCocoa.framework */; };
+		E0F4C78E1F536C4D00C13169 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F4C78B1F536C4D00C13169 /* ReactiveSwift.framework */; };
+		E0F4C78F1F536C4D00C13169 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F4C78C1F536C4D00C13169 /* Result.framework */; };
+		E0F6CDFA1F695C65008AB368 /* Add$OrSpend$ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F6CDF91F695C65008AB368 /* Add$OrSpend$ViewController.swift */; };
+		E0F6CDFC1F69FD5B008AB368 /* DecisionConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F6CDFB1F69FD5B008AB368 /* DecisionConfirmationViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E040077E1F51EB9600629219 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E04007581F51EB2500629219 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E040075F1F51EB2500629219;
+			remoteInfo = Sixpence;
+		};
+		E040079D1F51EC5100629219 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E04007581F51EB2500629219 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E040075F1F51EB2500629219;
+			remoteInfo = Sixpence;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E00B00471F789C9E002038EF /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		E00B00491F789CB3002038EF /* TransactionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTest.swift; sourceTree = "<group>"; };
+		E020E87A1F71A368006933F5 /* ProxyMoneyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProxyMoneyField.swift; sourceTree = "<group>"; };
+		E020E87C1F71B609006933F5 /* PropertyProtocol+Money.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PropertyProtocol+Money.swift"; sourceTree = "<group>"; };
+		E02A94521F5CDBC5000CA56A /* Money+Strideable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Money+Strideable.swift"; sourceTree = "<group>"; };
+		E02A94571F5CF3AB000CA56A /* Money+StrideableTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Money+StrideableTest.swift"; sourceTree = "<group>"; };
+		E04007601F51EB2500629219 /* Sixpence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sixpence.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E04007631F51EB2500629219 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E04007651F51EB2500629219 /* HowMuchToManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowMuchToManageViewController.swift; sourceTree = "<group>"; };
+		E04007681F51EB2500629219 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HowMuchToManageScreen.storyboard; sourceTree = "<group>"; };
+		E040076A1F51EB2500629219 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E040076D1F51EB2500629219 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E040076F1F51EB2500629219 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E04007791F51EB9600629219 /* SixpenceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SixpenceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E040077B1F51EB9600629219 /* TheStoryOfHowISellTheApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheStoryOfHowISellTheApp.swift; sourceTree = "<group>"; };
+		E040077D1F51EB9600629219 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E040078F1F51EBCE00629219 /* NewUser+HowMuchToManageScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NewUser+HowMuchToManageScreen.swift"; sourceTree = "<group>"; };
+		E04007921F51EBF100629219 /* HowMuchToManageScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowMuchToManageScreen.swift; sourceTree = "<group>"; };
+		E04007981F51EC5100629219 /* SixpenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SixpenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E040079C1F51EC5100629219 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E04007A41F51ECD800629219 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		E04007A51F51ECD800629219 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		E04007A91F51F03200629219 /* UIColor+theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+theme.swift"; sourceTree = "<group>"; };
+		E04007AB1F51F52F00629219 /* FinishButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishButton.swift; sourceTree = "<group>"; };
+		E04007B41F51FF3500629219 /* Money.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Money.framework; path = Carthage/Build/iOS/Money.framework; sourceTree = "<group>"; };
+		E04007C61F5202C500629219 /* ValueCoding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ValueCoding.framework; path = Carthage/Build/iOS/ValueCoding.framework; sourceTree = "<group>"; };
+		E04007CA1F52303200629219 /* DecisionScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DecisionScreen.storyboard; sourceTree = "<group>"; };
+		E04007D31F52667C00629219 /* DecisionScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecisionScreen.swift; sourceTree = "<group>"; };
+		E044AE991F6620CB0094FC0F /* Spend$ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spend$ViewController.swift; sourceTree = "<group>"; };
+		E044AE9B1F66222E0094FC0F /* KeyboardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardController.swift; sourceTree = "<group>"; };
+		E044AE9E1F6623F40094FC0F /* Add$ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Add$ViewController.swift; sourceTree = "<group>"; };
+		E044AEA21F6747CF0094FC0F /* AccountSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSpec.swift; sourceTree = "<group>"; };
+		E04768411F6595F70042687F /* NewUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
+		E058508F1F60F41D00D42C45 /* SwiftDate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftDate.framework; path = Carthage/Build/iOS/SwiftDate.framework; sourceTree = "<group>"; };
+		E05BAC121F848BDB003798A1 /* Array+isPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+isPresent.swift"; sourceTree = "<group>"; };
+		E05BAC151F88511B003798A1 /* Money+Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Money+Operators.swift"; sourceTree = "<group>"; };
+		E05BAC171F88550E003798A1 /* Money+OperatorsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Money+OperatorsSpec.swift"; sourceTree = "<group>"; };
+		E05BAC1B1F887089003798A1 /* MoneyFieldSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyFieldSpec.swift; sourceTree = "<group>"; };
+		E06DD82B1F65894E00A75C49 /* DisplayMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayMatcher.swift; sourceTree = "<group>"; };
+		E06DD82E1F6593FD00A75C49 /* NewUser+DecisionScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NewUser+DecisionScreen.swift"; sourceTree = "<group>"; };
+		E09BDB7E1F93082D00243CA9 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
+		E09BDB801F93994800243CA9 /* ShoppingCartViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewControllerSpec.swift; sourceTree = "<group>"; };
+		E09BDB821F959F0700243CA9 /* TextInputViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputViewModel.swift; sourceTree = "<group>"; };
+		E09BDB841F9638F000243CA9 /* ShoppingCart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
+		E09BDB861F9638FB00243CA9 /* ShoppingCartSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartSpec.swift; sourceTree = "<group>"; };
+		E09BDB881F9639C000243CA9 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		E0B63F871F71C08A00C0E4FB /* MoneyLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyLabel.swift; sourceTree = "<group>"; };
+		E0B9CB861F7F47310042CB18 /* TopDecisionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopDecisionViewController.swift; sourceTree = "<group>"; };
+		E0C85B831F539CD50027E2DC /* MoneyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyField.swift; sourceTree = "<group>"; };
+		E0C85B861F5480D50027E2DC /* AnimatedMoneyLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedMoneyLabel.swift; sourceTree = "<group>"; };
+		E0C85B891F54A2E30027E2DC /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		E0D500A01F694FCA00548836 /* DecisionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecisionViewController.swift; sourceTree = "<group>"; };
+		E0DBB0531F71963E00E82A3C /* CarouselController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselController.swift; sourceTree = "<group>"; };
+		E0F4C78A1F536C4D00C13169 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		E0F4C78B1F536C4D00C13169 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		E0F4C78C1F536C4D00C13169 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		E0F6CDF91F695C65008AB368 /* Add$OrSpend$ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Add$OrSpend$ViewController.swift; sourceTree = "<group>"; };
+		E0F6CDFB1F69FD5B008AB368 /* DecisionConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecisionConfirmationViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E04007761F51EB9600629219 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E04007A61F51ECD800629219 /* Nimble.framework in Frameworks */,
+				E04007A71F51ECD800629219 /* Quick.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E04007951F51EC5100629219 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E04007B11F51FB0C00629219 /* Nimble.framework in Frameworks */,
+				E04007B21F51FB0C00629219 /* Quick.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E04007BE1F52021C00629219 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E05850901F60F41D00D42C45 /* SwiftDate.framework in Frameworks */,
+				E0F4C78D1F536C4D00C13169 /* ReactiveCocoa.framework in Frameworks */,
+				E0F4C78E1F536C4D00C13169 /* ReactiveSwift.framework in Frameworks */,
+				E0F4C78F1F536C4D00C13169 /* Result.framework in Frameworks */,
+				E04007C71F5202C500629219 /* ValueCoding.framework in Frameworks */,
+				E04007C51F5202C500629219 /* Money.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E02A94541F5CDBD8000CA56A /* __Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E07E91F01F8928430002994F /* Swift */,
+				E05BAC141F885102003798A1 /* Money */,
+				E07E91EF1F8928170002994F /* ReactiveSwift */,
+			);
+			name = __Extensions;
+			sourceTree = "<group>";
+		};
+		E04007571F51EB2500629219 = {
+			isa = PBXGroup;
+			children = (
+				E04007621F51EB2500629219 /* Sixpence */,
+				E04007991F51EC5100629219 /* SixpenceTests */,
+				E040077A1F51EB9600629219 /* SixpenceUITests */,
+				E04007611F51EB2500629219 /* Products */,
+				E04007A31F51ECD800629219 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E04007611F51EB2500629219 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E04007601F51EB2500629219 /* Sixpence.app */,
+				E04007791F51EB9600629219 /* SixpenceUITests.xctest */,
+				E04007981F51EC5100629219 /* SixpenceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E04007621F51EB2500629219 /* Sixpence */ = {
+			isa = PBXGroup;
+			children = (
+				E040076F1F51EB2500629219 /* Info.plist */,
+				E040076A1F51EB2500629219 /* Assets.xcassets */,
+				E04007A91F51F03200629219 /* UIColor+theme.swift */,
+				E040076C1F51EB2500629219 /* LaunchScreen.storyboard */,
+				E04007631F51EB2500629219 /* AppDelegate.swift */,
+				E04007A21F51EC6D00629219 /* HowMuchToManageScreen */,
+				E04007C91F52301C00629219 /* DecisionScreen */,
+				E0C85B851F54809B0027E2DC /* __Sixpence_UIKit */,
+				E0C85B881F54A2CC0027E2DC /* __Domain */,
+				E02A94541F5CDBD8000CA56A /* __Extensions */,
+			);
+			path = Sixpence;
+			sourceTree = "<group>";
+		};
+		E040077A1F51EB9600629219 /* SixpenceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E040077D1F51EB9600629219 /* Info.plist */,
+				E040077B1F51EB9600629219 /* TheStoryOfHowISellTheApp.swift */,
+				E040078E1F51EBC100629219 /* Actors */,
+				E04007911F51EBDA00629219 /* Screens */,
+				E06DD82A1F65884200A75C49 /* Matchers */,
+			);
+			path = SixpenceUITests;
+			sourceTree = "<group>";
+		};
+		E040078E1F51EBC100629219 /* Actors */ = {
+			isa = PBXGroup;
+			children = (
+				E06DD82D1F6593E100A75C49 /* NewUser */,
+			);
+			name = Actors;
+			sourceTree = "<group>";
+		};
+		E04007911F51EBDA00629219 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				E04007921F51EBF100629219 /* HowMuchToManageScreen.swift */,
+				E04007D31F52667C00629219 /* DecisionScreen.swift */,
+			);
+			name = Screens;
+			sourceTree = "<group>";
+		};
+		E04007991F51EC5100629219 /* SixpenceTests */ = {
+			isa = PBXGroup;
+			children = (
+				E040079C1F51EC5100629219 /* Info.plist */,
+			);
+			path = SixpenceTests;
+			sourceTree = "<group>";
+		};
+		E04007A21F51EC6D00629219 /* HowMuchToManageScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E04007671F51EB2500629219 /* HowMuchToManageScreen.storyboard */,
+				E04007651F51EB2500629219 /* HowMuchToManageViewController.swift */,
+				E04007D51F526E4900629219 /* _Components */,
+			);
+			name = HowMuchToManageScreen;
+			sourceTree = "<group>";
+		};
+		E04007A31F51ECD800629219 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E058508F1F60F41D00D42C45 /* SwiftDate.framework */,
+				E0F4C78A1F536C4D00C13169 /* ReactiveCocoa.framework */,
+				E0F4C78B1F536C4D00C13169 /* ReactiveSwift.framework */,
+				E0F4C78C1F536C4D00C13169 /* Result.framework */,
+				E04007C61F5202C500629219 /* ValueCoding.framework */,
+				E04007B41F51FF3500629219 /* Money.framework */,
+				E04007A41F51ECD800629219 /* Nimble.framework */,
+				E04007A51F51ECD800629219 /* Quick.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E04007C91F52301C00629219 /* DecisionScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E04007CA1F52303200629219 /* DecisionScreen.storyboard */,
+				E0B9CB861F7F47310042CB18 /* TopDecisionViewController.swift */,
+				E0DBB0521F7195FA00E82A3C /* Carousel */,
+				E044AE9D1F6623360094FC0F /* Keyboard */,
+			);
+			name = DecisionScreen;
+			sourceTree = "<group>";
+		};
+		E04007D51F526E4900629219 /* _Components */ = {
+			isa = PBXGroup;
+			children = (
+				E04007AB1F51F52F00629219 /* FinishButton.swift */,
+			);
+			name = _Components;
+			sourceTree = "<group>";
+		};
+		E044AE9D1F6623360094FC0F /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E044AE9B1F66222E0094FC0F /* KeyboardController.swift */,
+				E0F6CDF91F695C65008AB368 /* Add$OrSpend$ViewController.swift */,
+				E044AE991F6620CB0094FC0F /* Spend$ViewController.swift */,
+				E044AE9E1F6623F40094FC0F /* Add$ViewController.swift */,
+			);
+			name = Keyboard;
+			sourceTree = "<group>";
+		};
+		E05BAC141F885102003798A1 /* Money */ = {
+			isa = PBXGroup;
+			children = (
+				E05BAC151F88511B003798A1 /* Money+Operators.swift */,
+				E05BAC171F88550E003798A1 /* Money+OperatorsSpec.swift */,
+				E02A94521F5CDBC5000CA56A /* Money+Strideable.swift */,
+				E02A94571F5CF3AB000CA56A /* Money+StrideableTest.swift */,
+			);
+			name = Money;
+			sourceTree = "<group>";
+		};
+		E06DD82A1F65884200A75C49 /* Matchers */ = {
+			isa = PBXGroup;
+			children = (
+				E06DD82B1F65894E00A75C49 /* DisplayMatcher.swift */,
+			);
+			name = Matchers;
+			sourceTree = "<group>";
+		};
+		E06DD82D1F6593E100A75C49 /* NewUser */ = {
+			isa = PBXGroup;
+			children = (
+				E04768411F6595F70042687F /* NewUser.swift */,
+				E040078F1F51EBCE00629219 /* NewUser+HowMuchToManageScreen.swift */,
+				E06DD82E1F6593FD00A75C49 /* NewUser+DecisionScreen.swift */,
+			);
+			name = NewUser;
+			sourceTree = "<group>";
+		};
+		E07E91EF1F8928170002994F /* ReactiveSwift */ = {
+			isa = PBXGroup;
+			children = (
+				E020E87C1F71B609006933F5 /* PropertyProtocol+Money.swift */,
+			);
+			name = ReactiveSwift;
+			sourceTree = "<group>";
+		};
+		E07E91F01F8928430002994F /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				E05BAC121F848BDB003798A1 /* Array+isPresent.swift */,
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
+		E0C85B851F54809B0027E2DC /* __Sixpence_UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				E0C85B831F539CD50027E2DC /* MoneyField.swift */,
+				E05BAC1B1F887089003798A1 /* MoneyFieldSpec.swift */,
+				E0B63F871F71C08A00C0E4FB /* MoneyLabel.swift */,
+				E0C85B861F5480D50027E2DC /* AnimatedMoneyLabel.swift */,
+				E09BDB821F959F0700243CA9 /* TextInputViewModel.swift */,
+			);
+			name = __Sixpence_UIKit;
+			sourceTree = "<group>";
+		};
+		E0C85B881F54A2CC0027E2DC /* __Domain */ = {
+			isa = PBXGroup;
+			children = (
+				E0C85B891F54A2E30027E2DC /* Account.swift */,
+				E044AEA21F6747CF0094FC0F /* AccountSpec.swift */,
+				E09BDB841F9638F000243CA9 /* ShoppingCart.swift */,
+				E09BDB861F9638FB00243CA9 /* ShoppingCartSpec.swift */,
+				E00B00471F789C9E002038EF /* Transaction.swift */,
+				E00B00491F789CB3002038EF /* TransactionTest.swift */,
+				E09BDB881F9639C000243CA9 /* Item.swift */,
+			);
+			name = __Domain;
+			sourceTree = "<group>";
+		};
+		E0DBB0521F7195FA00E82A3C /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				E0DBB0531F71963E00E82A3C /* CarouselController.swift */,
+				E0D500A01F694FCA00548836 /* DecisionViewController.swift */,
+				E0F6CDFB1F69FD5B008AB368 /* DecisionConfirmationViewController.swift */,
+				E09BDB7E1F93082D00243CA9 /* ShoppingCartViewController.swift */,
+				E09BDB801F93994800243CA9 /* ShoppingCartViewControllerSpec.swift */,
+				E020E87A1F71A368006933F5 /* ProxyMoneyField.swift */,
+			);
+			name = Carousel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E040075F1F51EB2500629219 /* Sixpence */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E04007721F51EB2500629219 /* Build configuration list for PBXNativeTarget "Sixpence" */;
+			buildPhases = (
+				E040075C1F51EB2500629219 /* Sources */,
+				E040075E1F51EB2500629219 /* Resources */,
+				E04007BE1F52021C00629219 /* Frameworks */,
+				E04007C81F5202FA00629219 /* Run Script (Carthage) */,
+				E04316E41F88853A001E0C08 /* Run Script (TODO's) */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sixpence;
+			productName = Sixpence;
+			productReference = E04007601F51EB2500629219 /* Sixpence.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E04007781F51EB9600629219 /* SixpenceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E04007821F51EB9600629219 /* Build configuration list for PBXNativeTarget "SixpenceUITests" */;
+			buildPhases = (
+				E04007751F51EB9600629219 /* Sources */,
+				E04007761F51EB9600629219 /* Frameworks */,
+				E04007A81F51ECDE00629219 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E040077F1F51EB9600629219 /* PBXTargetDependency */,
+			);
+			name = SixpenceUITests;
+			productName = SixpenceUITests;
+			productReference = E04007791F51EB9600629219 /* SixpenceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		E04007971F51EC5100629219 /* SixpenceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E040079F1F51EC5100629219 /* Build configuration list for PBXNativeTarget "SixpenceTests" */;
+			buildPhases = (
+				E04007941F51EC5100629219 /* Sources */,
+				E04007951F51EC5100629219 /* Frameworks */,
+				E04007B31F51FB1200629219 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E040079E1F51EC5100629219 /* PBXTargetDependency */,
+			);
+			name = SixpenceTests;
+			productName = SixpenceTests;
+			productReference = E04007981F51EC5100629219 /* SixpenceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E04007581F51EB2500629219 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Sixpence;
+				TargetAttributes = {
+					E040075F1F51EB2500629219 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = BV5EESPT9S;
+						ProvisioningStyle = Automatic;
+					};
+					E04007781F51EB9600629219 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = BV5EESPT9S;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E040075F1F51EB2500629219;
+					};
+					E04007971F51EC5100629219 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = BV5EESPT9S;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E040075F1F51EB2500629219;
+					};
+				};
+			};
+			buildConfigurationList = E040075B1F51EB2500629219 /* Build configuration list for PBXProject "Sixpence" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E04007571F51EB2500629219;
+			productRefGroup = E04007611F51EB2500629219 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E040075F1F51EB2500629219 /* Sixpence */,
+				E04007971F51EC5100629219 /* SixpenceTests */,
+				E04007781F51EB9600629219 /* SixpenceUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E040075E1F51EB2500629219 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E040076E1F51EB2500629219 /* LaunchScreen.storyboard in Resources */,
+				E040076B1F51EB2500629219 /* Assets.xcassets in Resources */,
+				E04007CB1F52303200629219 /* DecisionScreen.storyboard in Resources */,
+				E04007691F51EB2500629219 /* HowMuchToManageScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E04007A81F51ECDE00629219 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Quick.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nimble.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		E04007B31F51FB1200629219 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Quick.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nimble.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		E04007C81F5202FA00629219 /* Run Script (Carthage) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Money.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ValueCoding.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftDate.framework",
+			);
+			name = "Run Script (Carthage)";
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ValueCoding.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Money.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveCocoa.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Result.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftDate.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		E04316E41F88853A001E0C08 /* Run Script (TODO's) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script (TODO's)";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "KEYWORDS=\"TODO|FIXME|\\?\\?\\?:|\\!\\!\\!:\"\nfind \"${SRCROOT}/Sixpence\" \\( -name \"*.swift\" \\) -print0 | \\\nxargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | \\\nperl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E040075C1F51EB2500629219 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E09BDB7F1F93082D00243CA9 /* ShoppingCartViewController.swift in Sources */,
+				E02A94531F5CDBC5000CA56A /* Money+Strideable.swift in Sources */,
+				E0D500A11F694FCA00548836 /* DecisionViewController.swift in Sources */,
+				E044AE9F1F6623F40094FC0F /* Add$ViewController.swift in Sources */,
+				E044AE9A1F6620CB0094FC0F /* Spend$ViewController.swift in Sources */,
+				E0B9CB871F7F47310042CB18 /* TopDecisionViewController.swift in Sources */,
+				E04007AA1F51F03200629219 /* UIColor+theme.swift in Sources */,
+				E0DBB0541F71963E00E82A3C /* CarouselController.swift in Sources */,
+				E05BAC131F848BDB003798A1 /* Array+isPresent.swift in Sources */,
+				E044AE9C1F66222E0094FC0F /* KeyboardController.swift in Sources */,
+				E04007661F51EB2500629219 /* HowMuchToManageViewController.swift in Sources */,
+				E0C85B8A1F54A2E30027E2DC /* Account.swift in Sources */,
+				E09BDB831F959F0700243CA9 /* TextInputViewModel.swift in Sources */,
+				E0F6CDFA1F695C65008AB368 /* Add$OrSpend$ViewController.swift in Sources */,
+				E0B63F881F71C08A00C0E4FB /* MoneyLabel.swift in Sources */,
+				E05BAC161F88511B003798A1 /* Money+Operators.swift in Sources */,
+				E020E87D1F71B609006933F5 /* PropertyProtocol+Money.swift in Sources */,
+				E0C85B841F539CD50027E2DC /* MoneyField.swift in Sources */,
+				E00B00481F789C9E002038EF /* Transaction.swift in Sources */,
+				E020E87B1F71A368006933F5 /* ProxyMoneyField.swift in Sources */,
+				E09BDB891F9639C000243CA9 /* Item.swift in Sources */,
+				E09BDB851F9638F000243CA9 /* ShoppingCart.swift in Sources */,
+				E04007AC1F51F52F00629219 /* FinishButton.swift in Sources */,
+				E0F6CDFC1F69FD5B008AB368 /* DecisionConfirmationViewController.swift in Sources */,
+				E0C85B871F5480D50027E2DC /* AnimatedMoneyLabel.swift in Sources */,
+				E04007641F51EB2500629219 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E04007751F51EB9600629219 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E040077C1F51EB9600629219 /* TheStoryOfHowISellTheApp.swift in Sources */,
+				E04768421F6595F70042687F /* NewUser.swift in Sources */,
+				E06DD82C1F65894E00A75C49 /* DisplayMatcher.swift in Sources */,
+				E04007931F51EBF100629219 /* HowMuchToManageScreen.swift in Sources */,
+				E04007901F51EBCE00629219 /* NewUser+HowMuchToManageScreen.swift in Sources */,
+				E06DD82F1F6593FD00A75C49 /* NewUser+DecisionScreen.swift in Sources */,
+				E04007D41F52667C00629219 /* DecisionScreen.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E04007941F51EC5100629219 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E00B004A1F789CB3002038EF /* TransactionTest.swift in Sources */,
+				E05BAC181F88550E003798A1 /* Money+OperatorsSpec.swift in Sources */,
+				E05BAC1C1F887089003798A1 /* MoneyFieldSpec.swift in Sources */,
+				E09BDB871F9638FB00243CA9 /* ShoppingCartSpec.swift in Sources */,
+				E09BDB811F93994800243CA9 /* ShoppingCartViewControllerSpec.swift in Sources */,
+				E044AEA31F6747CF0094FC0F /* AccountSpec.swift in Sources */,
+				E02A94581F5CF3AB000CA56A /* Money+StrideableTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E040077F1F51EB9600629219 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E040075F1F51EB2500629219 /* Sixpence */;
+			targetProxy = E040077E1F51EB9600629219 /* PBXContainerItemProxy */;
+		};
+		E040079E1F51EC5100629219 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E040075F1F51EB2500629219 /* Sixpence */;
+			targetProxy = E040079D1F51EC5100629219 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E04007671F51EB2500629219 /* HowMuchToManageScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E04007681F51EB2500629219 /* Base */,
+			);
+			name = HowMuchToManageScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E040076C1F51EB2500629219 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E040076D1F51EB2500629219 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E04007701F51EB2500629219 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E04007711F51EB2500629219 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E04007731F51EB2500629219 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = BV5EESPT9S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Sixpence/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sixpence.Sixpence;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E04007741F51EB2500629219 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = BV5EESPT9S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Sixpence/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sixpence.Sixpence;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E04007801F51EB9600629219 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = BV5EESPT9S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = SixpenceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sixpence.SixpenceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Sixpence;
+			};
+			name = Debug;
+		};
+		E04007811F51EB9600629219 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = BV5EESPT9S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = SixpenceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sixpence.SixpenceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Sixpence;
+			};
+			name = Release;
+		};
+		E04007A01F51EC5100629219 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = BV5EESPT9S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = SixpenceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sixpence.SixpenceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sixpence.app/Sixpence";
+			};
+			name = Debug;
+		};
+		E04007A11F51EC5100629219 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = BV5EESPT9S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = SixpenceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sixpence.SixpenceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sixpence.app/Sixpence";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E040075B1F51EB2500629219 /* Build configuration list for PBXProject "Sixpence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E04007701F51EB2500629219 /* Debug */,
+				E04007711F51EB2500629219 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E04007721F51EB2500629219 /* Build configuration list for PBXNativeTarget "Sixpence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E04007731F51EB2500629219 /* Debug */,
+				E04007741F51EB2500629219 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E04007821F51EB9600629219 /* Build configuration list for PBXNativeTarget "SixpenceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E04007801F51EB9600629219 /* Debug */,
+				E04007811F51EB9600629219 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E040079F1F51EC5100629219 /* Build configuration list for PBXNativeTarget "SixpenceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E04007A01F51EC5100629219 /* Debug */,
+				E04007A11F51EC5100629219 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E04007581F51EB2500629219 /* Project object */;
+}

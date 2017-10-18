@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kRG-eG-zns">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Top Decision View Controller-->
+        <scene sceneID="iiX-CH-i6E">
+            <objects>
+                <viewController id="kRG-eG-zns" customClass="TopDecisionViewController" customModule="Sixpence" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ww1-gM-S3p"/>
+                        <viewControllerLayoutGuide type="bottom" id="eG5-8F-M68"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dkY-69-5Wr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3fi-qi-1GD">
+                                <rect key="frame" x="10" y="50" width="300" height="221.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="3Gg-Rp-eTe"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="Rw2-qI-iTZ" kind="embed" id="c2b-lU-3FT"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3fi-qi-1GD" firstAttribute="top" secondItem="Ww1-gM-S3p" secondAttribute="bottom" constant="30" id="LHo-ge-k0Q"/>
+                            <constraint firstItem="3fi-qi-1GD" firstAttribute="centerX" secondItem="dkY-69-5Wr" secondAttribute="centerX" id="k1I-ck-FNh"/>
+                            <constraint firstItem="3fi-qi-1GD" firstAttribute="height" secondItem="dkY-69-5Wr" secondAttribute="height" multiplier="39:100" id="tpD-1Z-NTc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z2e-78-bLX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-178" y="96"/>
+        </scene>
+        <!--Decision View Controller-->
+        <scene sceneID="RSg-mx-Ysa">
+            <objects>
+                <viewController id="meN-uH-K9q" customClass="DecisionViewController" customModule="Sixpence" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NSk-sy-8aV"/>
+                        <viewControllerLayoutGuide type="bottom" id="htI-Eu-ry1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="epg-1Y-Vc6">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="221.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="nk0-GV-cdl" userLabel="_">
+                                <rect key="frame" x="37.5" y="0.0" width="225" height="181.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="CURRENT BALANCE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="bfu-ha-I0D" userLabel="Title Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="225" height="17.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="DecisionScreen.titleLabel"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6mx-F9-fD5" userLabel="_">
+                                        <rect key="frame" x="0.0" y="30.5" width="225" height="151"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$XX.XX" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="60" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BQX-lR-ReB" userLabel="Balance Label" customClass="AnimatedMoneyLabel" customModule="Sixpence" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="225" height="73"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="DecisionScreen.balanceLabel"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="60"/>
+                                                <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="X.XX" borderStyle="line" textAlignment="right" minimumFontSize="55" translatesAutoresizingMaskIntoConstraints="NO" id="XZ3-l3-quy" userLabel="Change Balance Label" customClass="ProxyMoneyField" customModule="Sixpence" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="78" width="225" height="73"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="DecisionScreen.changeBalanceField"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="60"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="gml-Ch-Q7a"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="htI-Eu-ry1" firstAttribute="top" secondItem="nk0-GV-cdl" secondAttribute="bottom" constant="40" id="6zq-RM-ofn"/>
+                            <constraint firstItem="nk0-GV-cdl" firstAttribute="top" secondItem="epg-1Y-Vc6" secondAttribute="topMargin" id="Dhi-v1-Pap"/>
+                            <constraint firstItem="nk0-GV-cdl" firstAttribute="centerX" secondItem="epg-1Y-Vc6" secondAttribute="centerXWithinMargins" id="kgg-7f-JIO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zXm-8Z-z6Y"/>
+                    <connections>
+                        <outlet property="balanceLabel" destination="BQX-lR-ReB" id="gho-4e-7H2"/>
+                        <outlet property="changeBalanceLabel" destination="XZ3-l3-quy" id="MfE-dP-5id"/>
+                        <outlet property="titleLabel" destination="bfu-ha-I0D" id="NDo-I2-Pue"/>
+                        <segue destination="5kN-eW-NJt" kind="show" identifier="PreviewBalance" id="xmm-SR-Mal"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mXV-XU-ngk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1226" y="95"/>
+        </scene>
+        <!--Decision Confirmation View Controller-->
+        <scene sceneID="8ok-VX-AEs">
+            <objects>
+                <viewController storyboardIdentifier="DecisionConfirmationViewController" id="5kN-eW-NJt" customClass="DecisionConfirmationViewController" customModule="Sixpence" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ic6-oQ-2Om"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ei6-MC-iiv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JAJ-bY-6li">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="221.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VQL-La-Mxv" userLabel="_">
+                                <rect key="frame" x="37.5" y="-0.5" width="225" height="222"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="CURRENT BALANCE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Tuz-Ql-cGI" userLabel="Title Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="225" height="17.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="DecisionScreen.titleLabel"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6FP-lD-c42" userLabel="_">
+                                        <rect key="frame" x="0.0" y="37.5" width="225" height="184.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="XX.XX" textAlignment="right" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCI-vc-PeR" userLabel="Old Balance Label" customClass="MoneyLabel" customModule="Sixpence" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="225" height="42"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="DecisionScreen.balanceLabel"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="50"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rpF-nD-rzY" userLabel="_">
+                                                <rect key="frame" x="0.0" y="47" width="225" height="57.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZO-eH-7PU" userLabel="Minus Sign">
+                                                        <rect key="frame" x="0.0" y="0.0" width="17" height="57.5"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="50"/>
+                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X.XX" textAlignment="right" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wys-Ha-rLA" userLabel="Change Balance Label" customClass="MoneyLabel" customModule="Sixpence" customModuleProvider="target">
+                                                        <rect key="frame" x="17" y="0.0" width="208" height="57.5"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="DecisionScreen.balanceLabel"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="50"/>
+                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTl-n0-lwt" userLabel="Divider">
+                                                <rect key="frame" x="0.0" y="109.5" width="225" height="1"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="mmW-ET-Cti"/>
+                                                </constraints>
+                                            </view>
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$XX.XX" textAlignment="center" minimumFontSize="55" translatesAutoresizingMaskIntoConstraints="NO" id="263-tg-ZbY" userLabel="New Balance Label" customClass="MoneyField" customModule="Sixpence" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="115.5" width="225" height="69"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="DecisionScreen.changeBalanceField"/>
+                                                <color key="textColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="60"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="xvp-ui-4QN"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DrG-xU-7Mf" userLabel="_">
+                                <rect key="frame" x="267.5" y="91" width="26" height="43.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIx-1u-KAR">
+                                        <rect key="frame" x="0.0" y="0.0" width="26" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gray-shopping-cart-icon" translatesAutoresizingMaskIntoConstraints="NO" id="fb9-A0-gfS" userLabel="Cart Icon">
+                                        <rect key="frame" x="0.0" y="17.5" width="26" height="26"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DrG-xU-7Mf" firstAttribute="leading" secondItem="Wys-Ha-rLA" secondAttribute="trailing" constant="5" id="7oS-ax-uqd"/>
+                            <constraint firstItem="VQL-La-Mxv" firstAttribute="top" secondItem="JAJ-bY-6li" secondAttribute="topMargin" id="CJZ-rr-NSR"/>
+                            <constraint firstItem="DrG-xU-7Mf" firstAttribute="centerY" secondItem="Wys-Ha-rLA" secondAttribute="centerY" id="DIc-EU-IOl"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="VQL-La-Mxv" secondAttribute="bottom" id="SlP-2T-FPp"/>
+                            <constraint firstItem="VQL-La-Mxv" firstAttribute="centerX" secondItem="JAJ-bY-6li" secondAttribute="centerX" id="uLZ-dN-AJu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="changeBalanceLabel" destination="Wys-Ha-rLA" id="lHi-ml-dLs"/>
+                        <outlet property="newBalanceLabel" destination="263-tg-ZbY" id="PgZ-2y-lWC"/>
+                        <outlet property="numberLabel" destination="DIx-1u-KAR" id="yzh-ZW-AS3"/>
+                        <outlet property="oldBalanceLabel" destination="kCI-vc-PeR" id="iC7-hk-GCq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sH1-J7-cL9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1965" y="93"/>
+        </scene>
+        <!--Carousel Controller-->
+        <scene sceneID="lEr-M0-y1p">
+            <objects>
+                <navigationController storyboardIdentifier="CarouselController" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="Rw2-qI-iTZ" customClass="CarouselController" customModule="Sixpence" customModuleProvider="target" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bcW-kl-58O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="meN-uH-K9q" kind="relationship" relationship="rootViewController" id="Yx4-Cx-A5e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QgU-U6-0v0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="589" y="94"/>
+        </scene>
+        <!--Add$ Or Spend$ View Controller-->
+        <scene sceneID="9n4-QJ-HSo">
+            <objects>
+                <viewController id="Iz5-TJ-ESt" customClass="Add$OrSpend$ViewController" customModule="Sixpence" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PJP-9d-uA9"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vhc-oQ-wXr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Smf-IP-ywg">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="70"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="LYQ-qq-Ill" userLabel="_">
+                                <rect key="frame" x="0.0" y="0.0" width="250" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmN-Cr-0Fk" userLabel="Left Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="70"/>
+                                        <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="DecisionScreen.add$Button"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="23"/>
+                                        <state key="normal" title="Add $">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56T-qi-DiL" userLabel="Right Button">
+                                        <rect key="frame" x="125" y="0.0" width="125" height="70"/>
+                                        <color key="backgroundColor" red="0.66666666669999997" green="0.0" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="DecisionScreen.spend$Button"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="23"/>
+                                        <state key="normal" title="Spend $">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="hUw-PR-67b" kind="show" id="hGo-cD-ioS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="LYQ-qq-Ill" secondAttribute="bottom" id="7Jt-EP-H7i"/>
+                            <constraint firstItem="LYQ-qq-Ill" firstAttribute="leading" secondItem="Smf-IP-ywg" secondAttribute="leading" id="Bfz-a5-1Uw"/>
+                            <constraint firstItem="LYQ-qq-Ill" firstAttribute="top" secondItem="Smf-IP-ywg" secondAttribute="topMargin" id="mF2-Cb-at2"/>
+                            <constraint firstAttribute="trailing" secondItem="LYQ-qq-Ill" secondAttribute="trailing" id="zPO-Dx-73h"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wtw-Oe-Aav"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="leftButton" destination="mmN-Cr-0Fk" id="rsK-bN-HDx"/>
+                        <outlet property="rightButton" destination="56T-qi-DiL" id="hGl-SI-39o"/>
+                        <segue destination="3Xj-Vx-urG" kind="show" identifier="NotUsed" id="sST-8a-TN6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rvx-IK-P6K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1181" y="316"/>
+        </scene>
+        <!--Keyboard Controller-->
+        <scene sceneID="Yc4-gC-ucn">
+            <objects>
+                <navigationController storyboardIdentifier="KeyboardController" navigationBarHidden="YES" id="pYb-sT-7r1" customClass="KeyboardController" customModule="Sixpence" customModuleProvider="target" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="250" height="70"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jBi-oP-H3O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Iz5-TJ-ESt" kind="relationship" relationship="rootViewController" id="9Gp-R0-JkD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WnR-um-RSs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="542" y="316"/>
+        </scene>
+        <!--Spend$ View Controller-->
+        <scene sceneID="K3K-6g-iG4">
+            <objects>
+                <viewController id="3Xj-Vx-urG" customClass="Spend$ViewController" customModule="Sixpence" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Zl-d7-hDr"/>
+                        <viewControllerLayoutGuide type="bottom" id="qXE-W3-qVt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mgW-GF-h5D">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="70"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oI5-Jc-MR6">
+                                <rect key="frame" x="0.0" y="0.0" width="250" height="70"/>
+                                <color key="backgroundColor" red="0.66666666669999997" green="0.0" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="23"/>
+                                <state key="normal" title="Spend $">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="userDidTapSpend$Button" destination="3Xj-Vx-urG" eventType="touchUpInside" id="kEi-tn-fSj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qXE-W3-qVt" firstAttribute="top" secondItem="oI5-Jc-MR6" secondAttribute="bottom" id="0bD-Xo-Nm5"/>
+                            <constraint firstAttribute="trailing" secondItem="oI5-Jc-MR6" secondAttribute="trailing" id="5Ye-hM-dZl"/>
+                            <constraint firstItem="oI5-Jc-MR6" firstAttribute="top" secondItem="2Zl-d7-hDr" secondAttribute="bottom" id="i5N-AL-bys"/>
+                            <constraint firstItem="oI5-Jc-MR6" firstAttribute="leading" secondItem="mgW-GF-h5D" secondAttribute="leading" id="vTo-M9-IRg"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DLN-1N-dEU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1918" y="582"/>
+        </scene>
+        <!--Shopping Cart View Controller-->
+        <scene sceneID="PZr-AD-DI7">
+            <objects>
+                <viewController storyboardIdentifier="ShoppingCartViewController" id="hUw-PR-67b" customClass="ShoppingCartViewController" customModule="Sixpence" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GAy-Sk-wUb"/>
+                        <viewControllerLayoutGuide type="bottom" id="CJt-HP-DMo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Aov-bV-2ib">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="70"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VOJ-6J-l6s" userLabel="_">
+                                <rect key="frame" x="72" y="21" width="106.5" height="29.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white-shopping-cart-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Ctu-Yv-NNO" userLabel="Shop Icon">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="29.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="Hjh-Pm-kua"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-$X.XX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4VB-Pv-rXm" userLabel="Item Label">
+                                        <rect key="frame" x="30" y="0.0" width="76.5" height="29.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJD-B7-Hgh" userLabel="Finish Button">
+                                <rect key="frame" x="200" y="0.0" width="50" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="V05-ap-f9H"/>
+                                </constraints>
+                                <state key="normal" image="white-disclosure-icon"/>
+                                <connections>
+                                    <action selector="userDidTapShoppingCartArrowIcon" destination="hUw-PR-67b" eventType="touchUpInside" id="gKO-rt-L9d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.66666666666666663" green="0.0" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="AJD-B7-Hgh" secondAttribute="trailing" id="0O5-Mq-BCN"/>
+                            <constraint firstItem="VOJ-6J-l6s" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Aov-bV-2ib" secondAttribute="leading" id="3IR-hX-Om8"/>
+                            <constraint firstItem="AJD-B7-Hgh" firstAttribute="top" secondItem="GAy-Sk-wUb" secondAttribute="bottom" id="9sE-Xh-wbU"/>
+                            <constraint firstItem="VOJ-6J-l6s" firstAttribute="centerX" secondItem="Aov-bV-2ib" secondAttribute="centerX" id="Ere-y6-kdb"/>
+                            <constraint firstItem="CJt-HP-DMo" firstAttribute="top" secondItem="AJD-B7-Hgh" secondAttribute="bottom" id="OgB-Le-cyS"/>
+                            <constraint firstItem="VOJ-6J-l6s" firstAttribute="centerY" secondItem="Aov-bV-2ib" secondAttribute="centerY" id="ZIV-9v-xMJ"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="zjn-3I-6l6" appends="YES" id="JQv-NS-WrF"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="itemLabel" destination="4VB-Pv-rXm" id="dug-Pc-Jk8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EWK-Ts-vt7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="zjn-3I-6l6" userLabel="Add Item Action">
+                    <connections>
+                        <action selector="userDidTapShoppingCartIcon" destination="hUw-PR-67b" id="5kw-dY-u3o"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1918" y="316"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gray-shopping-cart-icon" width="26" height="26"/>
+        <image name="white-disclosure-icon" width="15" height="23"/>
+        <image name="white-shopping-cart-icon" width="26" height="26"/>
+    </resources>
+</document>
